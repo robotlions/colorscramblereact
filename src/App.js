@@ -1,48 +1,90 @@
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-function App() {
-  let blockRow = (
-    <div class="row">
-      <div class="col-4 col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
-      <div class="col-4 col-md-1">
-        <div class="colorBox"></div>
-      </div>
+let blockRow = (
+  <div class="row">
+    <div class="col-4 col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+    <div class="col-4 col-md-1">
+      <div class="colorBox"></div>
+    </div>
+  </div>
+);
+
+
+export const ScrollBottomContent = () => {
+  const [content, setContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 200
+      ) {
+       
+        if (!isLoading) {
+          setIsLoading(true);
+          setTimeout(() => {
+            const newContent = blockRow
+            setContent((prevContent) => [...prevContent, newContent]);
+            setIsLoading(false);
+          }, 100);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isLoading]); 
+  return (
+    <div>
+      {content.map((item, index) => (
+        <div key={index}>{item}</div>
+      ))}
+      {isLoading && <p>Loading...</p>}
     </div>
   );
+};
+
+function App() {
+  
 
   function rando() {
     return Math.floor(Math.random() * 255) + 1;
@@ -57,13 +99,7 @@ function App() {
     }
   }
 
-//   document.addEventListener('scroll', () => {
-//     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight
 
-//     if (window.scrollY >= scrollableHeight) {
-//         alert('User has scrolled to the bottom of the page!')
-//     }
-// })
 
   return (
     <div className="container">
@@ -86,6 +122,7 @@ function App() {
       {blockRow}
       {blockRow}
       {blockRow}
+      <ScrollBottomContent />
     </div>
   );
 }
