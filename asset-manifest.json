@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/colorscramblereact/static/css/main.05e6c8c8.css",
-    "main.js": "/colorscramblereact/static/js/main.9683561e.js",
+    "main.js": "/colorscramblereact/static/js/main.3dfc8a02.js",
     "static/js/787.87e0cd60.chunk.js": "/colorscramblereact/static/js/787.87e0cd60.chunk.js",
     "index.html": "/colorscramblereact/index.html",
     "main.05e6c8c8.css.map": "/colorscramblereact/static/css/main.05e6c8c8.css.map",
-    "main.9683561e.js.map": "/colorscramblereact/static/js/main.9683561e.js.map",
+    "main.3dfc8a02.js.map": "/colorscramblereact/static/js/main.3dfc8a02.js.map",
     "787.87e0cd60.chunk.js.map": "/colorscramblereact/static/js/787.87e0cd60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05e6c8c8.css",
-    "static/js/main.9683561e.js"
+    "static/js/main.3dfc8a02.js"
   ]
 }
