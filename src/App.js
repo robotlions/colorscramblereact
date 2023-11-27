@@ -57,6 +57,14 @@ function App() {
     }
   }
 
+//   document.addEventListener('scroll', () => {
+//     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight
+
+//     if (window.scrollY >= scrollableHeight) {
+//         alert('User has scrolled to the bottom of the page!')
+//     }
+// })
+
   return (
     <div className="container">
       <div id="mainButtonWrapper">
@@ -65,7 +73,7 @@ function App() {
           className="btn btn-warning"
           onClick={() => shuffleColors()}
         >
-          Shuffle Colors
+          Scramble Transmission!
         </button>
       </div>
       {blockRow}
