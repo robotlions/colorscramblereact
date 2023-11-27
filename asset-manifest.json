@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/robotlions/colorscramblereact/static/css/main.05e6c8c8.css",
-    "main.js": "/robotlions/colorscramblereact/static/js/main.00fc68ae.js",
-    "static/js/787.87e0cd60.chunk.js": "/robotlions/colorscramblereact/static/js/787.87e0cd60.chunk.js",
-    "index.html": "/robotlions/colorscramblereact/index.html",
-    "main.05e6c8c8.css.map": "/robotlions/colorscramblereact/static/css/main.05e6c8c8.css.map",
-    "main.00fc68ae.js.map": "/robotlions/colorscramblereact/static/js/main.00fc68ae.js.map",
-    "787.87e0cd60.chunk.js.map": "/robotlions/colorscramblereact/static/js/787.87e0cd60.chunk.js.map"
+    "main.css": "/colorscramblereact/static/css/main.05e6c8c8.css",
+    "main.js": "/colorscramblereact/static/js/main.22334fdc.js",
+    "static/js/787.87e0cd60.chunk.js": "/colorscramblereact/static/js/787.87e0cd60.chunk.js",
+    "index.html": "/colorscramblereact/index.html",
+    "main.05e6c8c8.css.map": "/colorscramblereact/static/css/main.05e6c8c8.css.map",
+    "main.22334fdc.js.map": "/colorscramblereact/static/js/main.22334fdc.js.map",
+    "787.87e0cd60.chunk.js.map": "/colorscramblereact/static/js/787.87e0cd60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05e6c8c8.css",
-    "static/js/main.00fc68ae.js"
+    "static/js/main.22334fdc.js"
   ]
 }
