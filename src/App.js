@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+
 
 function App() {
+  const githubIcon = <FontAwesomeIcon icon={faGithub} />;
+  const homeIcon = <FontAwesomeIcon icon={faHome} />
 
   function rando() {
     return Math.floor(Math.random() * 255) + 1;
@@ -172,16 +178,27 @@ function App() {
       <BlockRow />
       <BlockRow />
       <BlockRow />
-      <BlockRow /> 
       <BlockRow />
       <BlockRow />
       <BlockRow />
       <BlockRow />
       <BlockRow />
-
-     
+      <BlockRow />
 
       <ScrollBottomContent />
+
+      <div className="row brandRow text-end fixed-bottom">
+        <p className="linkLogos">
+          {" "}
+          <a id="gitLogo" href="https://github.com/robotlions">
+            {githubIcon}
+          </a>
+        
+          <a id="homeLogo" href="https://robotlions.com">
+            {homeIcon}
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
