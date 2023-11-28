@@ -15,6 +15,7 @@
 
 .brandRow {
   background-color: white;
+  opacity: .4;
   height: 80px;
   padding-right:15px;
   padding-top:10px;
@@ -53,6 +54,3 @@
   color: rgba(223, 227, 228);
 }
 
-.linkLogos a{
-  opacity: .4;
-}
